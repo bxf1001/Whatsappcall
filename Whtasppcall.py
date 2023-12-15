@@ -6,7 +6,7 @@ def phone_number(number):
     url = f"whatsapp://send?phone=+91{number}"
     subprocess.Popen(["cmd", "/C", f"start {url}"], shell=True)
 
-phone_number('89253770')
+phone_number('9087270492')
 
 #time.sleep(5)
 #x, y = pyautogui.position()
@@ -25,8 +25,5 @@ pyautogui.press('f12')
 #Puts LK
 pyautogui.hotkey('ctrl', 'alt', 'z')
 
-#To Terminate The Whastapp
-while True:
-    subprocess.call("TASKKILL /F /IM Whatsapp.exe", shell=True)
-    time.sleep(20) #add time here
-    break
+time.sleep(120) #add timer in seconds
+subprocess.call("TASKKILL /F /IM whatsapp.exe", shell=True)
